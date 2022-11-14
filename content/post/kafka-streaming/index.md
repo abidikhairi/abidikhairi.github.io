@@ -2,7 +2,7 @@
 title: "Introduction to Stream Processing with Apache Kafka"
 description: "How to use Apache Kafka to build a streaming data pipeline."
 date: 2022-09-04T12:19:19:00
-# image: pytorch-cover.png
+image: kafka-cover.png
 math: 
 categories:
     - Data Analysis
