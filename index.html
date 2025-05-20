@@ -1,410 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khairi Abidi | Decoding Life's Language</title>
+    <title>Khairi Abidi | Bridging Protein Language & Human Language</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom DNA helix animation */
-        .dna-helix {
-            position: relative;
-            height: 300px;
-            width: 200px;
-            margin: 0 auto;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-
-        .dna-strand {
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(to bottom, #4F46E5, #10B981);
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: dnaFloat 6s ease-in-out infinite alternate;
-        }
-
-        .dna-node {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: #4F46E5;
-            border-radius: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
-        }
-
-        @keyframes dnaFloat {
-            0% {
-                transform: translateX(-50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translateX(-50%) rotate(5deg);
-            }
-        }
-
-        /* Custom animations */
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #10B981;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .active::after {
-            width: 100%;
-        }
-
-        /* Gradient text */
+        
         .gradient-text {
-            background: linear-gradient(90deg, #4F46E5, #10B981);
+            background: linear-gradient(90deg, #3b82f6, #10b981);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            height: calc(100% - 2.5rem);
+            width: 2px;
+            background-color: #e5e7eb;
         }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #4F46E5, #10B981);
-            border-radius: 4px;
+        
+        .skill-pill:hover {
+            transform: scale(1.05);
         }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #4338CA, #0D9488);
+        
+        .animated-underline {
+            position: relative;
+        }
+        
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        
+        .wave {
+            animation: wave 2.5s infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+        
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
         }
     </style>
 </head>
-
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span
-                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-indigo-600">Khairi
-                        Abidi</span>
+                    <span class="text-xl font-bold gradient-text">Khairi Abidi</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home"
-                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium active">Home</a>
-                    <a href="#about"
-                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#research"
-                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Research</a>
-                    <a href="#publications"
-                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Publications</a>
-                    <a href="#contact"
-                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#about" class="animated-underline font-medium">About</a>
+                    <a href="#research" class="animated-underline font-medium">Research</a>
+                    <a href="#projects" class="animated-underline font-medium">Projects</a>
+                    <a href="#skills" class="animated-underline font-medium">Skills</a>
+                    <a href="#contact" class="animated-underline font-medium">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-500 hover:text-emerald-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
-
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Home</a>
-                <a href="#about"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">About</a>
-                <a href="#research"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Research</a>
-                <a href="#publications"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Publications</a>
-                <a href="#contact"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Contact</a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4 shadow-lg">
+            <a href="#about" class="block py-2 font-medium">About</a>
+            <a href="#research" class="block py-2 font-medium">Research</a>
+            <a href="#projects" class="block py-2 font-medium">Projects</a>
+            <a href="#skills" class="block py-2 font-medium">Skills</a>
+            <a href="#contact" class="block py-2 font-medium">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-indigo-50 to-emerald-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex items-center justify-between">
-                <div class="md:w-1/2 fade-in">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Khairi Abidi</h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold gradient-text mb-6">Decoding the Language of Life</h2>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Bridging the gap between human language and biological language through computational
-                        linguistics,
-                        bioinformatics, and artificial intelligence to unlock nature's deepest secrets.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#research"
-                            class="bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                            Explore Research
-                        </a>
-                        <a href="#contact"
-                            class="border border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium transition duration-300">
-                            Collaborate
-                        </a>
-                    </div>
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Khairi <span class="wave">👋</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 gradient-text">PhD Student & Data Scientist</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Bridging the gap between the language of life (proteins) and human language through machine learning and large language models.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition duration-300">
+                        View Projects
+                    </a>
                 </div>
-                <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center fade-in">
-                    <div class="dna-helix">
-                        <div class="dna-strand"></div>
-                        <!-- DNA nodes -->
-                        <div class="dna-node" style="top: 10%;"></div>
-                        <div class="dna-node" style="top: 20%; left: 45%; background-color: #10B981;"></div>
-                        <div class="dna-node" style="top: 30%;"></div>
-                        <div class="dna-node" style="top: 40%; left: 55%; background-color: #10B981;"></div>
-                        <div class="dna-node" style="top: 50%;"></div>
-                        <div class="dna-node" style="top: 60%; left: 45%; background-color: #10B981;"></div>
-                        <div class="dna-node" style="top: 70%;"></div>
-                        <div class="dna-node" style="top: 80%; left: 55%; background-color: #10B981;"></div>
-                        <div class="dna-node" style="top: 90%;"></div>
-                    </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Khairi Abidi" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600 to-transparent opacity-20"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">About My Research</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-sm">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Khairi Abidi" 
+                         class="w-full h-full object-cover">
+                </div>
             </div>
-
-            <div class="md:flex items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Linguistic Nature of Biology</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Life speaks in a complex language of molecules, proteins, and genetic codes. My research
-                        explores the striking parallels between
-                        human language and biological information processing, developing computational frameworks to
-                        translate between these two
-                        fundamental languages of existence.
-                    </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        By applying natural language processing techniques to genomic sequences and protein structures,
-                        we're uncovering grammatical
-                        rules in DNA, semantic relationships between proteins, and even potential "dialects" in cellular
-                        communication.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <span
-                            class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">Computational
-                            Biology</span>
-                        <span
-                            class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Bioinformatics</span>
-                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">NLP for
-                            Genomics</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">AI in
-                            Biology</span>
-                    </div>
-                </div>
-
-                <div class="md:w-1/2 md:pl-12 fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Academic Journey</h3>
-                    <div class="space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">PhD in Computer Science</h4>
-                                <p class="text-gray-600">ENSI, Manouba • 2023-Present</p>
-                                <p class="text-gray-500 text-sm mt-1">Thesis: Translating the Language of Life</p>
-                            </div>
-                        </div>
-
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">MS in Computer Science</h4>
-                                <p class="text-gray-600">University of Jendouba, Tunisia • 2020-2022</p>
-                            </div>
-                        </div>
-
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">BS in Computer Science</h4>
-                                <p class="text-gray-600">University of Jendouba, Tunisia • 2017-2020</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="md:w-2/3 md:pl-12">
+                <p class="text-lg text-gray-700 mb-6">
+                    I'm a passionate PhD student and Data Scientist working at the intersection of computational biology and natural language processing. My research focuses on developing novel machine learning approaches to understand and translate between protein sequences (the language of life) and human language.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    With a strong background in machine learning, deep learning, and large language models, I'm particularly interested in how we can leverage techniques from NLP to better understand biological sequences and vice versa.
+                </p>
+                <p class="text-lg text-gray-700">
+                    When I'm not training models or analyzing protein sequences, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Research Focus Areas</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
+    <section id="research" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">My Research</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-2xl font-semibold mb-6 gradient-text">Bridging Protein Language and Human Language</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-medium mb-4">Protein Language Models</h4>
+                    <p class="text-gray-700 mb-4">
+                        Investigating how transformer-based architectures can be adapted to understand and generate protein sequences, drawing parallels between amino acid "words" and natural language words.
+                    </p>
+                    <p class="text-gray-700">
+                        Developing novel attention mechanisms that capture the unique properties of protein sequences while maintaining the benefits of modern NLP architectures.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-4">Cross-Modal Translation</h4>
+                    <p class="text-gray-700 mb-4">
+                        Exploring methods to translate between protein sequences and their functional descriptions in human language, enabling better interpretation of biological data.
+                    </p>
+                    <p class="text-gray-700">
+                        Creating frameworks that allow researchers to query protein databases using natural language and receive meaningful, interpretable results.
+                    </p>
+                </div>
             </div>
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                <h4 class="text-xl font-medium mb-3 text-blue-800">Research Objectives</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Develop protein-specific language models that outperform current sequence alignment methods</li>
+                    <li>Create bidirectional translation systems between protein function and natural language descriptions</li>
+                    <li>Improve interpretability of protein language models for biological discovery</li>
+                    <li>Enable natural language interfaces for protein databases and analysis tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Research Card 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.1s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-dna text-emerald-600 text-xl"></i>
-                            </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Featured Projects</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
+                    <i class="fas fa-dna text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">ProtLM: Protein Language Model</h3>
+                    <p class="text-gray-600 mb-4">A transformer-based model trained on millions of protein sequences to predict structure and function.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Transformers</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Bioinformatics</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">View Project →</a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center">
+                    <i class="fas fa-language text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">BioTranslator</h3>
+                    <p class="text-gray-600 mb-4">A framework for translating between protein sequences and natural language descriptions of their function.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">HuggingFace</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">NLP</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">View Project →</a>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
+                    <i class="fas fa-database text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">ProteinQA</h3>
+                    <p class="text-gray-600 mb-4">A question-answering system for protein databases using natural language queries.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Spark</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">Scala</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">LLMs</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">View Project →</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="#" class="inline-block px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition duration-300">
+                View All Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Technical Skills</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Core Skills -->
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Core Competencies</h3>
+                <div class="flex flex-wrap gap-3">
+                    <div class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium transition duration-200">Machine Learning</div>
+                    <div class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium transition duration-200">Deep Learning</div>
+                    <div class="skill-pill px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium transition duration-200">LLM Training</div>
+                    <div class="skill-pill px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full font-medium transition duration-200">Data Analysis</div>
+                    <div class="skill-pill px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium transition duration-200">Statistical Modeling</div>
+                    <div class="skill-pill px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium transition duration-200">Bioinformatics</div>
+                    <div class="skill-pill px-4 py-2 bg-pink-100 text-pink-800 rounded-full font-medium transition duration-200">Natural Language Processing</div>
+                </div>
+            </div>
+            
+            <!-- Technical Tools -->
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Technical Tools</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-medium mb-2">Languages</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center"><i class="fab fa-python text-blue-500 mr-2"></i> Python</li>
+                            <li class="flex items-center"><i class="fas fa-code text-red-500 mr-2"></i> Scala</li>
+                            <li class="flex items-center"><i class="fab fa-r-project text-blue-400 mr-2"></i> R</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Frameworks</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center"><i class="fas fa-fire text-orange-500 mr-2"></i> PyTorch</li>
+                            <li class="flex items-center"><i class="fas fa-robot text-yellow-500 mr-2"></i> Transformers</li>
+                            <li class="flex items-center"><i class="fas fa-bolt text-blue-400 mr-2"></i> Spark</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Libraries</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center"><i class="fas fa-brain text-purple-500 mr-2"></i> HuggingFace</li>
+                            <li class="flex items-center"><i class="fas fa-chart-line text-green-500 mr-2"></i> Pandas/Numpy</li>
+                            <li class="flex items-center"><i class="fas fa-project-diagram text-pink-500 mr-2"></i> Scikit-learn</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Tools</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center"><i class="fab fa-git-alt text-orange-500 mr-2"></i> Git</li>
+                            <li class="flex items-center"><i class="fas fa-server text-gray-500 mr-2"></i> Docker</li>
+                            <li class="flex items-center"><i class="fas fa-cloud text-blue-300 mr-2"></i> AWS/GCP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Experience & Education</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Experience -->
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Professional Experience</h3>
+                <div class="space-y-8">
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-blue-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Genomic Linguistics</h3>
-                        <p class="text-gray-600">
-                            Developing grammatical models for DNA sequences that can predict gene expression patterns
-                            and regulatory elements with unprecedented accuracy.
+                        <h4 class="text-xl font-medium">Data Scientist</h4>
+                        <p class="text-gray-500 mb-1">Biotech Company • 2021-Present</p>
+                        <p class="text-gray-700">
+                            Developing machine learning models for protein sequence analysis and drug discovery. Leading NLP projects to bridge biological and human language.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-green-600"></i>
+                        </div>
+                        <h4 class="text-xl font-medium">Machine Learning Engineer</h4>
+                        <p class="text-gray-500 mb-1">AI Research Lab • 2019-2021</p>
+                        <p class="text-gray-700">
+                            Implemented transformer-based models for various NLP tasks. Optimized distributed training pipelines using PyTorch and Spark.
                         </p>
                     </div>
                 </div>
-
-                <!-- Research Card 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.2s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-language text-indigo-600 text-xl"></i>
-                            </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Education</h3>
+                <div class="space-y-8">
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-purple-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Protein Semantics</h3>
-                        <p class="text-gray-600">
-                            Applying semantic analysis techniques to protein structures to understand their functional
-                            relationships and evolutionary history.
+                        <h4 class="text-xl font-medium">PhD in Computational Biology</h4>
+                        <p class="text-gray-500 mb-1">University of Science • 2021-Present</p>
+                        <p class="text-gray-700">
+                            Researching protein language models and their applications in understanding biological sequences and functions.
                         </p>
                     </div>
-                </div>
-
-                <!-- Research Card 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.3s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-robot text-emerald-600 text-xl"></i>
-                            </div>
+                    
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                            <i class="fas fa-university text-yellow-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Biological Machine Translation</h3>
-                        <p class="text-gray-600">
-                            Creating neural networks that can translate between human language descriptions of
-                            biological processes and their molecular implementations.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Research Card 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.4s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-project-diagram text-indigo-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Cellular Communication</h3>
-                        <p class="text-gray-600">
-                            Modeling cell signaling pathways as information networks to decode the "language" cells use
-                            to coordinate complex behaviors.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Research Card 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.5s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-brain text-emerald-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Neural Code Deciphering</h3>
-                        <p class="text-gray-600">
-                            Investigating parallels between linguistic processing in the brain and information encoding
-                            in neural circuits.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Research Card 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
-                    style="animation-delay: 0.6s;">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
-                                <i class="fas fa-shield-virus text-indigo-600 text-xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Pathogen Linguistics</h3>
-                        <p class="text-gray-600">
-                            Analyzing viral and bacterial genomes as "foreign languages" to predict mutations and
-                            develop countermeasures.
+                        <h4 class="text-xl font-medium">MSc in Data Science</h4>
+                        <p class="text-gray-500 mb-1">Tech Institute • 2018-2020</p>
+                        <p class="text-gray-700">
+                            Specialized in machine learning and big data technologies. Thesis on attention mechanisms in sequence models.
                         </p>
                     </div>
                 </div>
@@ -412,225 +402,135 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Selected Publications</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
-            </div>
-
-            <div class="space-y-8">
-                <!-- Publication 1 -->
-                <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.1s;">
-                    <div class="md:flex items-start">
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Grammatical Structures in Non-Coding
-                                DNA: A Computational Linguistics Approach</h3>
-                            <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Zhang, L., Wilson, E. (2023). Nature
-                                Biotechnology, 41(4), 512-525.
-                            </p>
-                            <p class="text-gray-600">
-                                Demonstrated that regulatory regions of DNA follow grammatical patterns similar to human
-                                language, enabling prediction of gene expression with 92% accuracy.
-                            </p>
-                        </div>
-                        <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#"
-                                class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
-                                View Paper <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Publication 2 -->
-                <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.2s;">
-                    <div class="md:flex items-start">
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Protein Semantics: A Natural Language
-                                Processing Framework for Structural Biology</h3>
-                            <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Lee, C., Brown, D. (2022). Cell Systems,
-                                14(3), 210-225.
-                            </p>
-                            <p class="text-gray-600">
-                                Developed a semantic analysis pipeline for protein structures that revealed previously
-                                unknown functional relationships between protein families.
-                            </p>
-                        </div>
-                        <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#"
-                                class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
-                                View Paper <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Publication 3 -->
-                <!-- Publication 4 -->
-                <div class="text-center mt-12 fade-in">
-                    <a href="#"
-                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700">
-                        View All Publications <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gradient-to-br from-indigo-50 to-emerald-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Collaborate With Me</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                Interested in collaborating or learning more about my work? Feel free to reach out!
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Contact Form</h3>
+                <form>
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
             </div>
-
-            <div class="md:flex">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8 fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">Email</h4>
-                                <p class="text-gray-600">khairi.abidi@majesteye.com</p>
-                            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 gradient-text">Contact Information</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-blue-600"></i>
                         </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">Address</h4>
-                                <p class="text-gray-600">Department of Computer Science<br>National School 
-                                    of Computer Science<br>Manouba, Tunisia</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <div
-                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">Phone</h4>
-                                <p class="text-gray-600">(216) 28-407-062</p>
-                            </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Email</h4>
+                            <p class="text-gray-600">khairi.abidi@example.com</p>
                         </div>
                     </div>
-
-                    <div class="mt-10">
-                        <h4 class="text-lg font-medium text-gray-800 mb-4">Connect With Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="#"
-                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#"
-                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#"
-                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
-                                <i class="fab fa-google-scholar"></i>
-                            </a>
-                            <a href="#"
-                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#"
-                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
-                                <i class="fab fa-researchgate"></i>
-                            </a>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fab fa-linkedin-in text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">LinkedIn</h4>
+                            <p class="text-gray-600">linkedin.com/in/khairiabidi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fab fa-github text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">GitHub</h4>
+                            <p class="text-gray-600">github.com/khairiabidi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-orange-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Location</h4>
+                            <p class="text-gray-600">Research Lab, University of Science</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="md:w-1/2 fade-in">
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name"
-                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email"
-                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
-                        </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4"
-                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit"
-                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                
+                <div class="mt-10">
+                    <h4 class="font-medium text-gray-800 mb-4">Let's Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 hover:bg-green-200 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-200 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-200 transition duration-300">
+                            <i class="fab fa-google-scholar"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:items-center md:justify-between">
-                <div class="flex justify-center md:order-2 space-x-6 md:ml-8">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-twitter"></i>
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Khairi Abidi</span>
+                    <p class="text-gray-400 mt-2">Bridging protein language and human language</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-google-scholar"></i>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-google-scholar text-xl"></i>
                     </a>
                 </div>
-                <div class="mt-8 md:mt-0 md:order-1">
-                    <p class="text-center text-base text-gray-400">
-                        &copy; 2025 Khairi Abidi. Decoding the language of life.
-                    </p>
-                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Khairi Abidi. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to top button -->
-    <button id="back-to-top"
-        class="fixed bottom-8 right-8 bg-gradient-to-r from-emerald-500 to-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <script>
         // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function () {
+        document.getElementById('menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -639,79 +539,34 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+                
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
             } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
+                nav.classList.remove('shadow-md');
             }
         });
-
-        backToTopButton.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Highlight active section in navigation
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section');
-            let currentSection = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (pageYOffset >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Form submission
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                form.reset();
-            });
-        }
     </script>
 </body>
-
 </html>
