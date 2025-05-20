@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Alex Chen | Decoding Life's Language</title>
+    <title>Khairi Abidi | Decoding Life's Language</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,7 +15,7 @@
             width: 200px;
             margin: 0 auto;
         }
-        
+
         .dna-strand {
             position: absolute;
             width: 2px;
@@ -24,7 +25,7 @@
             transform: translateX(-50%);
             animation: dnaFloat 6s ease-in-out infinite alternate;
         }
-        
+
         .dna-node {
             position: absolute;
             width: 12px;
@@ -35,35 +36,47 @@
             transform: translateX(-50%);
             box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
         }
-        
+
         @keyframes dnaFloat {
-            0% { transform: translateX(-50%) rotate(0deg); }
-            100% { transform: translateX(-50%) rotate(5deg); }
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(5deg);
+            }
         }
-        
+
         /* Custom animations */
         .fade-in {
             animation: fadeIn 1.5s ease-in-out;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .card-hover {
             transition: all 0.3s ease;
         }
-        
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -74,15 +87,15 @@
             background-color: #10B981;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         .active::after {
             width: 100%;
         }
-        
+
         /* Gradient text */
         .gradient-text {
             background: linear-gradient(90deg, #4F46E5, #10B981);
@@ -90,40 +103,48 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(to bottom, #4F46E5, #10B981);
             border-radius: 4px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(to bottom, #4338CA, #0D9488);
         }
     </style>
 </head>
+
 <body class="bg-gray-50 font-sans antialiased">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-indigo-600">Dr. Alex Chen</span>
+                    <span
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-indigo-600">Khairi
+                        Abidi</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium active">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#research" class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Research</a>
-                    <a href="#publications" class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Publications</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#home"
+                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium active">Home</a>
+                    <a href="#about"
+                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#research"
+                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Research</a>
+                    <a href="#publications"
+                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Publications</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-gray-500 hover:text-emerald-600 focus:outline-none">
@@ -132,15 +153,20 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">About</a>
-                <a href="#research" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Research</a>
-                <a href="#publications" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Publications</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Contact</a>
+                <a href="#home"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Home</a>
+                <a href="#about"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">About</a>
+                <a href="#research"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Research</a>
+                <a href="#publications"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Publications</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Contact</a>
             </div>
         </div>
     </nav>
@@ -150,17 +176,20 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex items-center justify-between">
                 <div class="md:w-1/2 fade-in">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Dr. Alex Chen</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Khairi Abidi</h1>
                     <h2 class="text-2xl md:text-3xl font-semibold gradient-text mb-6">Decoding the Language of Life</h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Bridging the gap between human language and biological language through computational linguistics, 
+                        Bridging the gap between human language and biological language through computational
+                        linguistics,
                         bioinformatics, and artificial intelligence to unlock nature's deepest secrets.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#research" class="bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                        <a href="#research"
+                            class="bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
                             Explore Research
                         </a>
-                        <a href="#contact" class="border border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium transition duration-300">
+                        <a href="#contact"
+                            class="border border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium transition duration-300">
                             Collaborate
                         </a>
                     </div>
@@ -191,64 +220,76 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">About My Research</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
             </div>
-            
+
             <div class="md:flex items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Linguistic Nature of Biology</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Life speaks in a complex language of molecules, proteins, and genetic codes. My research explores the striking parallels between 
-                        human language and biological information processing, developing computational frameworks to translate between these two 
+                        Life speaks in a complex language of molecules, proteins, and genetic codes. My research
+                        explores the striking parallels between
+                        human language and biological information processing, developing computational frameworks to
+                        translate between these two
                         fundamental languages of existence.
                     </p>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        By applying natural language processing techniques to genomic sequences and protein structures, we're uncovering grammatical 
-                        rules in DNA, semantic relationships between proteins, and even potential "dialects" in cellular communication.
+                        By applying natural language processing techniques to genomic sequences and protein structures,
+                        we're uncovering grammatical
+                        rules in DNA, semantic relationships between proteins, and even potential "dialects" in cellular
+                        communication.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">Computational Biology</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Bioinformatics</span>
-                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">NLP for Genomics</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">AI in Biology</span>
+                        <span
+                            class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">Computational
+                            Biology</span>
+                        <span
+                            class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Bioinformatics</span>
+                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">NLP for
+                            Genomics</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">AI in
+                            Biology</span>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 md:pl-12 fade-in">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Academic Journey</h3>
                     <div class="space-y-6">
                         <div class="flex">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-graduation-cap"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">PhD in Computational Biology</h4>
-                                <p class="text-gray-600">MIT • 2018-2023</p>
-                                <p class="text-gray-500 text-sm mt-1">Thesis: "Linguistic Models for Genomic Sequence Analysis"</p>
+                                <h4 class="text-lg font-medium text-gray-800">PhD in Computer Science</h4>
+                                <p class="text-gray-600">ENSI, Manouba • 2023-Present</p>
+                                <p class="text-gray-500 text-sm mt-1">Thesis: Translating the Language of Life</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-university"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">MS in Bioinformatics</h4>
-                                <p class="text-gray-600">Stanford University • 2016-2018</p>
+                                <h4 class="text-lg font-medium text-gray-800">MS in Computer Science</h4>
+                                <p class="text-gray-600">University of Jendouba, Tunisia • 2020-2022</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-book"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-medium text-gray-800">BS in Linguistics & Molecular Biology</h4>
-                                <p class="text-gray-600">University of California, Berkeley • 2012-2016</p>
+                                <h4 class="text-lg font-medium text-gray-800">BS in Computer Science</h4>
+                                <p class="text-gray-600">University of Jendouba, Tunisia • 2017-2020</p>
                             </div>
                         </div>
                     </div>
@@ -264,10 +305,11 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Research Focus Areas</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Research Card 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.1s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.1s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -276,13 +318,15 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Genomic Linguistics</h3>
                         <p class="text-gray-600">
-                            Developing grammatical models for DNA sequences that can predict gene expression patterns and regulatory elements with unprecedented accuracy.
+                            Developing grammatical models for DNA sequences that can predict gene expression patterns
+                            and regulatory elements with unprecedented accuracy.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Research Card 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.2s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.2s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -291,13 +335,15 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Protein Semantics</h3>
                         <p class="text-gray-600">
-                            Applying semantic analysis techniques to protein structures to understand their functional relationships and evolutionary history.
+                            Applying semantic analysis techniques to protein structures to understand their functional
+                            relationships and evolutionary history.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Research Card 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.3s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.3s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -306,13 +352,15 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Biological Machine Translation</h3>
                         <p class="text-gray-600">
-                            Creating neural networks that can translate between human language descriptions of biological processes and their molecular implementations.
+                            Creating neural networks that can translate between human language descriptions of
+                            biological processes and their molecular implementations.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Research Card 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.4s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.4s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -321,13 +369,15 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Cellular Communication</h3>
                         <p class="text-gray-600">
-                            Modeling cell signaling pathways as information networks to decode the "language" cells use to coordinate complex behaviors.
+                            Modeling cell signaling pathways as information networks to decode the "language" cells use
+                            to coordinate complex behaviors.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Research Card 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.5s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.5s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -336,13 +386,15 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Neural Code Deciphering</h3>
                         <p class="text-gray-600">
-                            Investigating parallels between linguistic processing in the brain and information encoding in neural circuits.
+                            Investigating parallels between linguistic processing in the brain and information encoding
+                            in neural circuits.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Research Card 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.6s;">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover fade-in"
+                    style="animation-delay: 0.6s;">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="flex-shrink-0 bg-gradient-to-r from-emerald-100 to-indigo-100 p-3 rounded-lg">
@@ -351,7 +403,8 @@
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Pathogen Linguistics</h3>
                         <p class="text-gray-600">
-                            Analyzing viral and bacterial genomes as "foreign languages" to predict mutations and develop countermeasures.
+                            Analyzing viral and bacterial genomes as "foreign languages" to predict mutations and
+                            develop countermeasures.
                         </p>
                     </div>
                 </div>
@@ -366,95 +419,64 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Selected Publications</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
             </div>
-            
+
             <div class="space-y-8">
                 <!-- Publication 1 -->
                 <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.1s;">
                     <div class="md:flex items-start">
                         <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Grammatical Structures in Non-Coding DNA: A Computational Linguistics Approach</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Grammatical Structures in Non-Coding
+                                DNA: A Computational Linguistics Approach</h3>
                             <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Zhang, L., Wilson, E. (2023). Nature Biotechnology, 41(4), 512-525.
+                                <span class="font-medium">Chen, A.</span>, Zhang, L., Wilson, E. (2023). Nature
+                                Biotechnology, 41(4), 512-525.
                             </p>
                             <p class="text-gray-600">
-                                Demonstrated that regulatory regions of DNA follow grammatical patterns similar to human language, enabling prediction of gene expression with 92% accuracy.
+                                Demonstrated that regulatory regions of DNA follow grammatical patterns similar to human
+                                language, enabling prediction of gene expression with 92% accuracy.
                             </p>
                         </div>
                         <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#" class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
+                            <a href="#"
+                                class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
                                 View Paper <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Publication 2 -->
                 <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.2s;">
                     <div class="md:flex items-start">
                         <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Protein Semantics: A Natural Language Processing Framework for Structural Biology</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Protein Semantics: A Natural Language
+                                Processing Framework for Structural Biology</h3>
                             <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Lee, C., Brown, D. (2022). Cell Systems, 14(3), 210-225.
+                                <span class="font-medium">Chen, A.</span>, Lee, C., Brown, D. (2022). Cell Systems,
+                                14(3), 210-225.
                             </p>
                             <p class="text-gray-600">
-                                Developed a semantic analysis pipeline for protein structures that revealed previously unknown functional relationships between protein families.
+                                Developed a semantic analysis pipeline for protein structures that revealed previously
+                                unknown functional relationships between protein families.
                             </p>
                         </div>
                         <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#" class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
+                            <a href="#"
+                                class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
                                 View Paper <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Publication 3 -->
-                <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.3s;">
-                    <div class="md:flex items-start">
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Biological Machine Translation: From Scientific Literature to Executable Models</h3>
-                            <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Johnson, B. (2021). PLOS Computational Biology, 17(8), e1008932.
-                            </p>
-                            <p class="text-gray-600">
-                                Created a transformer-based system that translates biological pathway descriptions into computational models with 85% fidelity to expert implementations.
-                            </p>
-                        </div>
-                        <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#" class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
-                                View Paper <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Publication 4 -->
-                <div class="bg-gray-50 rounded-lg p-6 card-hover fade-in" style="animation-delay: 0.4s;">
-                    <div class="md:flex items-start">
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">The Linguistics of Viral Evolution: Predicting Antigenic Drift in Influenza</h3>
-                            <p class="text-gray-600 mb-3">
-                                <span class="font-medium">Chen, A.</span>, Smith, R., Adams, M. (2020). Science Advances, 6(32), eabb5985.
-                            </p>
-                            <p class="text-gray-600">
-                                Applied language modeling techniques to predict influenza virus evolution with 18-month lead time, potentially revolutionizing vaccine development.
-                            </p>
-                        </div>
-                        <div class="md:w-1/4 mt-4 md:mt-0 md:text-right">
-                            <a href="#" class="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium">
-                                View Paper <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="text-center mt-12 fade-in">
+                    <a href="#"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700">
+                        View All Publications <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="text-center mt-12 fade-in">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700">
-                    View All Publications <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
     </section>
 
     <!-- Contact Section -->
@@ -464,95 +486,109 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Collaborate With Me</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-indigo-600 mx-auto"></div>
             </div>
-            
+
             <div class="md:flex">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8 fade-in">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Email</h4>
-                                <p class="text-gray-600">alex.chen@mit.edu</p>
+                                <p class="text-gray-600">khairi.abidi@majesteye.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Address</h4>
-                                <p class="text-gray-600">Department of Computational Biology<br>Massachusetts Institute of Technology<br>Cambridge, MA 02139</p>
+                                <p class="text-gray-600">Department of Computer Science<br>National School 
+                                    of Computer Science<br>Manouba, Tunisia</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-emerald-100 to-indigo-100 text-emerald-600">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Phone</h4>
-                                <p class="text-gray-600">(617) 253-0000</p>
+                                <p class="text-gray-600">(216) 28-407-062</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-10">
                         <h4 class="text-lg font-medium text-gray-800 mb-4">Connect With Me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
+                            <a href="#"
+                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
+                            <a href="#"
+                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
+                            <a href="#"
+                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
                                 <i class="fab fa-google-scholar"></i>
                             </a>
-                            <a href="#" class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
+                            <a href="#"
+                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
+                            <a href="#"
+                                class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition duration-300 shadow-sm">
                                 <i class="fab fa-researchgate"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 fade-in">
                     <form class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
+                            <input type="text" id="name" name="name"
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
-                        
+
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
+                            <input type="email" id="email" name="email"
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
-                        
+
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
-                            <input type="text" id="subject" name="subject" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
+                            <input type="text" id="subject" name="subject"
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
-                        
+
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+                            <textarea id="message" name="message" rows="4"
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"></textarea>
                         </div>
-                        
+
                         <div>
-                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                            <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-indigo-600 hover:from-emerald-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                                 Send Message
                             </button>
                         </div>
@@ -579,7 +615,7 @@
                 </div>
                 <div class="mt-8 md:mt-0 md:order-1">
                     <p class="text-center text-base text-gray-400">
-                        &copy; 2023 Dr. Alex Chen. Decoding the language of life.
+                        &copy; 2025 Khairi Abidi. Decoding the language of life.
                     </p>
                 </div>
             </div>
@@ -587,36 +623,37 @@
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-emerald-500 to-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-gradient-to-r from-emerald-500 to-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
         // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('menu-btn').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 window.scrollTo({
                     top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
-                
+
                 // Update active nav link
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('active');
                 });
                 this.classList.add('active');
-                
+
                 // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (!mobileMenu.classList.contains('hidden')) {
@@ -624,11 +661,11 @@
                 }
             });
         });
-        
+
         // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', function() {
+
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('opacity-0', 'invisible');
                 backToTopButton.classList.add('opacity-100', 'visible');
@@ -637,26 +674,26 @@
                 backToTopButton.classList.add('opacity-0', 'invisible');
             }
         });
-        
-        backToTopButton.addEventListener('click', function() {
+
+        backToTopButton.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
+
         // Highlight active section in navigation
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section');
             let currentSection = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
                 if (pageYOffset >= sectionTop) {
                     currentSection = section.getAttribute('id');
                 }
             });
-            
+
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${currentSection}`) {
@@ -664,11 +701,11 @@
                 }
             });
         });
-        
+
         // Form submission
         const form = document.querySelector('form');
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
                 alert('Thank you for your message! I will get back to you soon.');
                 form.reset();
@@ -676,4 +713,5 @@
         }
     </script>
 </body>
+
 </html>
