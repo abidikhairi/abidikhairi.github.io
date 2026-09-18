@@ -1,61 +1,48 @@
 core:
-  - label: Machine Learning
-    color: blue
-  - label: Deep Learning
-    color: green
-  - label: LLM Training
-    color: purple
-  - label: Data Analysis
-    color: yellow
-  - label: Statistical Modeling
-    color: red
-  - label: Bioinformatics
-    color: indigo
-  - label: Natural Language Processing
-    color: pink
+  - LLM Fine-Tuning & RLHF
+  - Protein Language Models
+  - Knowledge Distillation
+  - GRPO / RLVR Post-Training
+  - Distributed Data Engineering
+  - Production ML Infrastructure
 
 tools:
+  - category: LLM Engineering
+    items:
+      - SFT
+      - LoRA / QLoRA
+      - PEFT
+      - TRL
+      - DeepSpeed
+      - vLLM
+      - GRPO / RLVR Post-Training
+      - Knowledge Distillation
+      - Tokenizer / BPE Design
+      - Reward Modeling
+  - category: ML & Deep Learning
+    items:
+      - PyTorch
+      - HuggingFace Transformers
+      - Graph Neural Networks
+      - Seq2Seq
+      - Vector Quantization
+      - Whisper Fine-Tuning
+  - category: Data Engineering
+    items:
+      - Apache Spark
+      - ETL Pipeline Design
+      - Distributed Systems
+      - Data Governance
+  - category: Infrastructure
+    items:
+      - Docker
+      - nginx
+      - Linux
+      - UFW / Fail2ban
+      - Git
+      - MLflow
   - category: Languages
     items:
-      - label: Python
-        icon: "fab fa-python"
-        color: "text-blue-500"
-      - label: Scala
-        icon: "fas fa-code"
-        color: "text-red-500"
-      - label: R
-        icon: "fab fa-r-project"
-        color: "text-blue-400"
-  - category: Frameworks
-    items:
-      - label: PyTorch
-        icon: "fas fa-fire"
-        color: "text-orange-500"
-      - label: Transformers
-        icon: "fas fa-robot"
-        color: "text-yellow-500"
-      - label: Spark
-        icon: "fas fa-bolt"
-        color: "text-blue-400"
-  - category: Libraries
-    items:
-      - label: HuggingFace
-        icon: "fas fa-brain"
-        color: "text-purple-500"
-      - label: Pandas/Numpy
-        icon: "fas fa-chart-line"
-        color: "text-green-500"
-      - label: Scikit-learn
-        icon: "fas fa-project-diagram"
-        color: "text-pink-500"
-  - category: Tools
-    items:
-      - label: Git
-        icon: "fab fa-git-alt"
-        color: "text-orange-500"
-      - label: Docker
-        icon: "fas fa-server"
-        color: "text-gray-500"
-      - label: AWS/GCP
-        icon: "fas fa-cloud"
-        color: "text-blue-300"
+      - Python
+      - Scala
+      - SQL

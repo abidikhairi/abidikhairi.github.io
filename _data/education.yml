@@ -1,17 +1,14 @@
-- degree: PhD in Computational Biology
-  org: "University of Science"
-  period: "2021-Present"
+- degree: PhD in Computer Science
+  org: "University of Manouba - National School of Computer Science"
+  period: "2023-Present"
   description: >-
-    Researching protein language models and their applications in
-    understanding biological sequences and functions.
-  icon: "fas fa-graduation-cap"
-  color: purple
+    Focus: NLP x Bioinformatics - protein language models, knowledge graphs,
+    and discrete representation learning. Thesis: Translating the Language
+    of Life.
 
-- degree: MSc in Data Science
-  org: "Tech Institute"
-  period: "2018-2020"
+- degree: MSc in Computer Science
+  org: "University of Jendouba - Faculty of Legal, Economic and Management Sciences of Jendouba"
+  period: "2020-2022"
   description: >-
-    Specialized in machine learning and big data technologies. Thesis on
-    attention mechanisms in sequence models.
-  icon: "fas fa-university"
-  color: yellow
+    Data, Knowledge and Distributed Systems. Thesis: Graph Representation
+    Learning via Dense Connections.

@@ -1,38 +1,35 @@
-- title: "ProtLM: Protein Language Model"
-  description: "A transformer-based model trained on millions of protein sequences to predict structure and function."
+- title: "Life2Lang"
+  description: "Sequence-to-sequence protein language model bridging sequence understanding and generation."
   icon: "fas fa-dna"
-  gradient: "from-blue-500 to-blue-600"
   link: "#"
   tags:
-    - label: PyTorch
-      color: blue
-    - label: Transformers
-      color: green
-    - label: Bioinformatics
-      color: purple
+    - PyTorch
+    - Seq2Seq
+    - Protein Language Models
 
-- title: "BioTranslator"
-  description: "A framework for translating between protein sequences and natural language descriptions of their function."
-  icon: "fas fa-language"
-  gradient: "from-green-500 to-green-600"
+- title: "Eshmun-R1"
+  description: "Distilled a 1.3B-parameter teacher into a 400M-parameter student, then trained with SFT and GRPO (RLVR) against structural/functional reward models."
+  icon: "fas fa-brain"
   link: "#"
   tags:
-    - label: PyTorch
-      color: blue
-    - label: HuggingFace
-      color: yellow
-    - label: NLP
-      color: red
+    - Knowledge Distillation
+    - GRPO / RLVR
+    - PyTorch
 
-- title: "ProteinQA"
-  description: "A question-answering system for protein databases using natural language queries."
-  icon: "fas fa-database"
-  gradient: "from-purple-500 to-purple-600"
+- title: "UniprotKG"
+  description: "Structured UniProt into a queryable biomedical knowledge graph powering instruction-dataset construction for LLM fine-tuning."
+  icon: "fas fa-project-diagram"
   link: "#"
   tags:
-    - label: Spark
-      color: blue
-    - label: Scala
-      color: gray
-    - label: LLMs
-      color: indigo
+    - Knowledge Graphs
+    - ETL
+    - LLM Fine-Tuning
+
+- title: "Nightwatch"
+  description: "Multi-model serving observability CLI in Python that manages LLM deployment and configuration through a unified API, replacing vLLM's full CLI option set."
+  icon: "fas fa-terminal"
+  link: "#"
+  tags:
+    - Python
+    - CLI
+    - vLLM

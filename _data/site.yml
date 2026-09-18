@@ -1,95 +1,89 @@
 nav:
   - label: About
-    anchor: about
+    url: /
   - label: Research
-    anchor: research
+    url: /research/
   - label: Projects
-    anchor: projects
+    url: /projects/
   - label: Skills
-    anchor: skills
-  - label: Contact
-    anchor: contact
+    url: /skills/
+  - label: Experience
+    url: /experience/
 
 hero:
   greeting: "Hi, I'm Khairi"
-  role: "PhD Student & Data Scientist"
+  role: "LLM / AI Engineer - Fine-Tuning, RLHF & Reasoning"
   description: >-
-    Bridging the gap between the language of life (proteins) and human language
-    through machine learning and large language models.
+    AI/LLM engineer with 4 years of experience shipping production ML and
+    data systems, leading a 6-engineer team at Majesteye, and completing PhD
+    research on protein language models at ENSI Manouba.
   image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
 
 about:
-  image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  paragraphs:
-    - >-
-      I'm a passionate PhD student and Data Scientist working at the intersection
-      of computational biology and natural language processing. My research
-      focuses on developing novel machine learning approaches to understand and
-      translate between protein sequences (the language of life) and human
-      language.
-    - >-
-      With a strong background in machine learning, deep learning, and large
-      language models, I'm particularly interested in how we can leverage
-      techniques from NLP to better understand biological sequences and vice
-      versa.
-    - >-
-      When I'm not training models or analyzing protein sequences, you can find
-      me contributing to open-source projects, mentoring aspiring data
-      scientists, or exploring the latest advancements in AI research.
+  summary: >-
+    I lead AI and data engineering at Majesteye while pursuing a PhD in NLP
+    for Bioinformatics at ENSI Manouba, working at the intersection of large
+    language models, reasoning, and the language of life.
 
 research:
-  title: "Bridging Protein Language and Human Language"
+  title: "Translating the Language of Life"
+  subtitle: "PhD Researcher - ENSI Manouba - 2023 - Present"
   columns:
-    - heading: "Protein Language Models"
+    - heading: "Life2Lang"
       paragraphs:
         - >-
-          Investigating how transformer-based architectures can be adapted to
-          understand and generate protein sequences, drawing parallels between
-          amino acid "words" and natural language words.
-        - >-
-          Developing novel attention mechanisms that capture the unique
-          properties of protein sequences while maintaining the benefits of
-          modern NLP architectures.
-    - heading: "Cross-Modal Translation"
+          A sequence-to-sequence protein language model bridging sequence
+          understanding and generation, currently in resubmission to
+          ISMB/ECCB, a Bioinformatics journal, and NeurIPS GenBio.
+    - heading: "UniprotKG"
       paragraphs:
         - >-
-          Exploring methods to translate between protein sequences and their
-          functional descriptions in human language, enabling better
-          interpretation of biological data.
+          Structured UniProt into a queryable biomedical knowledge graph to
+          power instruction-dataset construction for LLM fine-tuning.
+    - heading: "Eshmun"
+      paragraphs:
         - >-
-          Creating frameworks that allow researchers to query protein databases
-          using natural language and receive meaningful, interpretable results.
+          A controlled tokenizer ablation on a 120M-parameter causal language
+          model trained on SwissProt sequences, comparing amino-acid-level
+          vs. 10K/20K/32K BPE vocabularies to isolate the effect of
+          domain-specific vocabulary design on downstream protein tasks.
+        - >-
+          Designing a chain-of-thought pretraining signal grounded in static
+          biophysical features, plus a reinforcement-learning stage with
+          structural/functional reward models.
+    - heading: "Eshmun-R1"
+      paragraphs:
+        - >-
+          Distilled a 1.3B-parameter teacher (InstructProtein) into a
+          400M-parameter student via alternating layer extraction (6L-ALT),
+          then fine-tuned on a 212K-example in-house instruction dataset
+          built from SwissProt.
+        - >-
+          Ran GRPO (RLVR) on the SFT checkpoint with a composite verifiable
+          reward - format gate, PSIPRED-based secondary-structure
+          correctness, and a Gaussian length penalty - on Colab Pro A100.
   objectives:
-    - "Develop protein-specific language models that outperform current sequence alignment methods"
-    - "Create bidirectional translation systems between protein function and natural language descriptions"
-    - "Improve interpretability of protein language models for biological discovery"
-    - "Enable natural language interfaces for protein databases and analysis tools"
-
-contact:
-  intro: "Interested in collaborating or learning more about my work? Feel free to reach out!"
-  email: "khairi.abidi@example.com"
-  linkedin: "linkedin.com/in/khairiabidi"
-  github: "github.com/khairiabidi"
-  location: "Research Lab, University of Science"
+    - "Develop protein language models that unify sequence understanding and generation"
+    - "Build structured knowledge resources (UniprotKG) to support LLM fine-tuning on biological data"
+    - "Study how domain-specific tokenization and vocabulary design affect downstream protein tasks"
+    - "Apply reasoning-oriented post-training (chain-of-thought, RLVR) grounded in biophysical and structural reward signals"
+  publications:
+    - >-
+      Abidi K., Inoubli W., Mephu Nguifo E. - "DGCN: Learning Graph
+      Representations Via Dense Connections," Procedia Computer Science,
+      Vol. 225, 2023, pp. 951-960. doi.org/10.1016/j.procs.2023.10.082
 
 social:
-  - platform: Twitter
-    icon: "fab fa-twitter"
-    url: "#"
-    color: blue
   - platform: LinkedIn
     icon: "fab fa-linkedin-in"
-    url: "#"
-    color: green
+    url: "https://linkedin.com/in/khairi-abidi"
   - platform: GitHub
     icon: "fab fa-github"
-    url: "#"
-    color: purple
-  - platform: Google Scholar
-    icon: "fab fa-google-scholar"
-    url: "#"
-    color: red
+    url: "https://github.com/abidikhairi"
+  - platform: Email
+    icon: "fas fa-envelope"
+    url: "mailto:abidikhairi.1337@gmail.com"
 
 footer:
-  tagline: "Bridging protein language and human language"
-  copyright: "© 2023 Khairi Abidi. All rights reserved."
+  tagline: "AI/LLM Engineer - Translating the Language of Life"
+  copyright: "© 2026 Khairi Abidi. All rights reserved."

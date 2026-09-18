@@ -2,11 +2,11 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
-                <span class="text-xl font-bold gradient-text">{{ site.author | default: "Khairi Abidi" }}</span>
+                <a href="{{ '/' | relative_url }}" class="text-xl font-bold text-navy-900">{{ site.author | default: "Khairi Abidi" }}</a>
             </div>
             <div class="hidden md:flex items-center space-x-8">
                 {% for item in site.data.site.nav %}
-                <a href="#{{ item.anchor }}" class="animated-underline font-medium">{{ item.label }}</a>
+                <a href="{{ item.url | relative_url }}" class="animated-underline font-medium">{{ item.label }}</a>
                 {% endfor %}
             </div>
             <div class="md:hidden flex items-center">
@@ -21,7 +21,7 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4 shadow-lg">
         {% for item in site.data.site.nav %}
-        <a href="#{{ item.anchor }}" class="block py-2 font-medium">{{ item.label }}</a>
+        <a href="{{ item.url | relative_url }}" class="block py-2 font-medium">{{ item.label }}</a>
         {% endfor %}
     </div>
 </nav>

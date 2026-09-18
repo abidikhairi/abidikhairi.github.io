@@ -1,17 +1,37 @@
-- role: Data Scientist
-  org: "Biotech Company"
-  period: "2021-Present"
+- role: Head of AI & Data Engineering
+  org: "Majesteye"
+  period: "Oct 2022 - Present"
   description: >-
-    Developing machine learning models for protein sequence analysis and drug
-    discovery. Leading NLP projects to bridge biological and human language.
-  icon: "fas fa-briefcase"
-  color: blue
+    Leading a 6-engineer cross-functional team (ML, data engineering, BI)
+    across 3-5 concurrent client engagements for financial institutions,
+    government agencies, and insurance carriers. Built distributed
+    Spark/Scala/SQL pipelines that automated ~80% of manual data processing
+    for a systemic bank, deployed an LLM-powered business copilot and an
+    internal LLM served with vLLM, and implemented data governance
+    frameworks for regulated banking and insurance clients.
 
-- role: Machine Learning Engineer
-  org: "AI Research Lab"
-  period: "2019-2021"
+- role: Teaching Assistant
+  org: "University of Jendouba"
+  period: "2025 - 2026"
   description: >-
-    Implemented transformer-based models for various NLP tasks. Optimized
-    distributed training pipelines using PyTorch and Spark.
-  icon: "fas fa-laptop-code"
-  color: green
+    Teaching OOP and Java Programming, and Data Analytics with Python.
+
+- role: Visiting PhD Student
+  org: "Clermont Ferrand - LIMOS"
+  period: "Dec 2024 - March 2025"
+  description: >-
+    Implemented transformer-based models for protein understanding tasks.
+
+- role: Visiting Msc Student
+  org: "Clermont Ferrand - LIMOS"
+  period: "Jun 2022 - Jul 2025"
+  description: >-
+    Implemented and benchmarks new graph neural networks models on various open benchmarks.
+
+- role: Fullstack Developer (Intern)
+  org: "Majesteye"
+  period: "Jan 2020 - Jun 2020"
+  description: >-
+    Built structured data indexing systems for large-scale datasets and
+    benchmarked open-source search engines to inform indexing architecture
+    decisions.
