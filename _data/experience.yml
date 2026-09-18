@@ -1,0 +1,17 @@
+- role: Data Scientist
+  org: "Biotech Company"
+  period: "2021-Present"
+  description: >-
+    Developing machine learning models for protein sequence analysis and drug
+    discovery. Leading NLP projects to bridge biological and human language.
+  icon: "fas fa-briefcase"
+  color: blue
+
+- role: Machine Learning Engineer
+  org: "AI Research Lab"
+  period: "2019-2021"
+  description: >-
+    Implemented transformer-based models for various NLP tasks. Optimized
+    distributed training pipelines using PyTorch and Spark.
+  icon: "fas fa-laptop-code"
+  color: green

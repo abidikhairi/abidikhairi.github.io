@@ -1,0 +1,95 @@
+nav:
+  - label: About
+    anchor: about
+  - label: Research
+    anchor: research
+  - label: Projects
+    anchor: projects
+  - label: Skills
+    anchor: skills
+  - label: Contact
+    anchor: contact
+
+hero:
+  greeting: "Hi, I'm Khairi"
+  role: "PhD Student & Data Scientist"
+  description: >-
+    Bridging the gap between the language of life (proteins) and human language
+    through machine learning and large language models.
+  image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+
+about:
+  image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  paragraphs:
+    - >-
+      I'm a passionate PhD student and Data Scientist working at the intersection
+      of computational biology and natural language processing. My research
+      focuses on developing novel machine learning approaches to understand and
+      translate between protein sequences (the language of life) and human
+      language.
+    - >-
+      With a strong background in machine learning, deep learning, and large
+      language models, I'm particularly interested in how we can leverage
+      techniques from NLP to better understand biological sequences and vice
+      versa.
+    - >-
+      When I'm not training models or analyzing protein sequences, you can find
+      me contributing to open-source projects, mentoring aspiring data
+      scientists, or exploring the latest advancements in AI research.
+
+research:
+  title: "Bridging Protein Language and Human Language"
+  columns:
+    - heading: "Protein Language Models"
+      paragraphs:
+        - >-
+          Investigating how transformer-based architectures can be adapted to
+          understand and generate protein sequences, drawing parallels between
+          amino acid "words" and natural language words.
+        - >-
+          Developing novel attention mechanisms that capture the unique
+          properties of protein sequences while maintaining the benefits of
+          modern NLP architectures.
+    - heading: "Cross-Modal Translation"
+      paragraphs:
+        - >-
+          Exploring methods to translate between protein sequences and their
+          functional descriptions in human language, enabling better
+          interpretation of biological data.
+        - >-
+          Creating frameworks that allow researchers to query protein databases
+          using natural language and receive meaningful, interpretable results.
+  objectives:
+    - "Develop protein-specific language models that outperform current sequence alignment methods"
+    - "Create bidirectional translation systems between protein function and natural language descriptions"
+    - "Improve interpretability of protein language models for biological discovery"
+    - "Enable natural language interfaces for protein databases and analysis tools"
+
+contact:
+  intro: "Interested in collaborating or learning more about my work? Feel free to reach out!"
+  email: "khairi.abidi@example.com"
+  linkedin: "linkedin.com/in/khairiabidi"
+  github: "github.com/khairiabidi"
+  location: "Research Lab, University of Science"
+
+social:
+  - platform: Twitter
+    icon: "fab fa-twitter"
+    url: "#"
+    color: blue
+  - platform: LinkedIn
+    icon: "fab fa-linkedin-in"
+    url: "#"
+    color: green
+  - platform: GitHub
+    icon: "fab fa-github"
+    url: "#"
+    color: purple
+  - platform: Google Scholar
+    icon: "fab fa-google-scholar"
+    url: "#"
+    color: red
+
+footer:
+  tagline: "Bridging protein language and human language"
+  copyright: "© 2023 Khairi Abidi. All rights reserved."

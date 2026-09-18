@@ -1,0 +1,38 @@
+- title: "ProtLM: Protein Language Model"
+  description: "A transformer-based model trained on millions of protein sequences to predict structure and function."
+  icon: "fas fa-dna"
+  gradient: "from-blue-500 to-blue-600"
+  link: "#"
+  tags:
+    - label: PyTorch
+      color: blue
+    - label: Transformers
+      color: green
+    - label: Bioinformatics
+      color: purple
+
+- title: "BioTranslator"
+  description: "A framework for translating between protein sequences and natural language descriptions of their function."
+  icon: "fas fa-language"
+  gradient: "from-green-500 to-green-600"
+  link: "#"
+  tags:
+    - label: PyTorch
+      color: blue
+    - label: HuggingFace
+      color: yellow
+    - label: NLP
+      color: red
+
+- title: "ProteinQA"
+  description: "A question-answering system for protein databases using natural language queries."
+  icon: "fas fa-database"
+  gradient: "from-purple-500 to-purple-600"
+  link: "#"
+  tags:
+    - label: Spark
+      color: blue
+    - label: Scala
+      color: gray
+    - label: LLMs
+      color: indigo

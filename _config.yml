@@ -1,0 +1,21 @@
+title: "Khairi Abidi | Bridging Protein Language & Human Language"
+author: "Khairi Abidi"
+description: >-
+  Bridging the gap between the language of life (proteins) and human language
+  through machine learning and large language models.
+url: "https://abidikhairi.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+  - README.md
+  - vendor
+  - node_modules

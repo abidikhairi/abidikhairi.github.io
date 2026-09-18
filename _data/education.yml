@@ -1,0 +1,17 @@
+- degree: PhD in Computational Biology
+  org: "University of Science"
+  period: "2021-Present"
+  description: >-
+    Researching protein language models and their applications in
+    understanding biological sequences and functions.
+  icon: "fas fa-graduation-cap"
+  color: purple
+
+- degree: MSc in Data Science
+  org: "Tech Institute"
+  period: "2018-2020"
+  description: >-
+    Specialized in machine learning and big data technologies. Thesis on
+    attention mechanisms in sequence models.
+  icon: "fas fa-university"
+  color: yellow

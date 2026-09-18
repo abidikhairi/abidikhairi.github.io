@@ -1,0 +1,10 @@
+<div class="timeline-item relative pl-10">
+    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-{{ include.item.color }}-100 flex items-center justify-center">
+        <i class="{{ include.item.icon }} text-{{ include.item.color }}-600"></i>
+    </div>
+    <h4 class="text-xl font-medium">{{ include.title }}</h4>
+    <p class="text-gray-500 mb-1">{{ include.subtitle }} • {{ include.item.period }}</p>
+    <p class="text-gray-700">
+        {{ include.item.description }}
+    </p>
+</div>

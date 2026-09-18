@@ -1,0 +1,31 @@
+{% assign research = site.data.site.research %}
+<!-- Research Section -->
+<section id="research" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2">My Research</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+    </div>
+    <div class="bg-white p-8 rounded-xl shadow-sm">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text">{{ research.title }}</h3>
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            {% for column in research.columns %}
+            <div>
+                <h4 class="text-xl font-medium mb-4">{{ column.heading }}</h4>
+                {% for paragraph in column.paragraphs %}
+                <p class="text-gray-700 {% unless forloop.last %}mb-4{% endunless %}">
+                    {{ paragraph }}
+                </p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+            <h4 class="text-xl font-medium mb-3 text-blue-800">Research Objectives</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                {% for objective in research.objectives %}
+                <li>{{ objective }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+{% assign skills = site.data.skills %}
+<!-- Skills Section -->
+<section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2">Technical Skills</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <!-- Core Skills -->
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-2xl font-semibold mb-6 gradient-text">Core Competencies</h3>
+            <div class="flex flex-wrap gap-3">
+                {% for skill in skills.core %}
+                <div class="skill-pill px-4 py-2 bg-{{ skill.color }}-100 text-{{ skill.color }}-800 rounded-full font-medium transition duration-200">{{ skill.label }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Technical Tools -->
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-2xl font-semibold mb-6 gradient-text">Technical Tools</h3>
+            <div class="grid grid-cols-2 gap-4">
+                {% for group in skills.tools %}
+                <div>
+                    <h4 class="font-medium mb-2">{{ group.category }}</h4>
+                    <ul class="space-y-1">
+                        {% for item in group.items %}
+                        <li class="flex items-center"><i class="{{ item.icon }} {{ item.color }} mr-2"></i> {{ item.label }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

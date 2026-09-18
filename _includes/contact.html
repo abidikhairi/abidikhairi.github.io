@@ -1,0 +1,90 @@
+{% assign contact = site.data.site.contact %}
+<!-- Contact Section -->
+<section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto"></div>
+        <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+            {{ contact.intro }}
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-2xl font-semibold mb-6 gradient-text">Contact Form</h3>
+            <form>
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-2xl font-semibold mb-6 gradient-text">Contact Information</h3>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-envelope text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">Email</h4>
+                        <p class="text-gray-600">{{ contact.email }}</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fab fa-linkedin-in text-green-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">LinkedIn</h4>
+                        <p class="text-gray-600">{{ contact.linkedin }}</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fab fa-github text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">GitHub</h4>
+                        <p class="text-gray-600">{{ contact.github }}</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-orange-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-map-marker-alt text-orange-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">Location</h4>
+                        <p class="text-gray-600">{{ contact.location }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <h4 class="font-medium text-gray-800 mb-4">Let's Connect</h4>
+                <div class="flex space-x-4">
+                    {% for link in site.data.site.social %}
+                    <a href="{{ link.url }}" class="w-10 h-10 bg-{{ link.color }}-100 rounded-full flex items-center justify-center text-{{ link.color }}-600 hover:bg-{{ link.color }}-200 transition duration-300">
+                        <i class="{{ link.icon }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
