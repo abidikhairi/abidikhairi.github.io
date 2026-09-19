@@ -12,11 +12,16 @@ Pushing to `main` deploys automatically — no separate build step.
 - `/projects/` — Projects
 - `/skills/` — Technical skills
 - `/experience/` — Experience & education
+- `/blog/` — Blog posts
 
 ## Editing content
 
 All page content lives in `_data/*.yml` — edit those files, not the HTML, to update bio text,
 projects, skills, or experience/education. See `CLAUDE.md` for the full structure.
+
+To add a blog post, drop a new Markdown file in `_posts/` named `YYYY-MM-DD-title.md` with
+front matter (`layout: post`, `title`, optional `tags`) — Jekyll picks it up automatically and
+it appears on `/blog/`.
 
 ## Local preview
 

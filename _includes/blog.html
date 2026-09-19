@@ -1,0 +1,29 @@
+<!-- Blog Section -->
+<section id="blog" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2">Blog</h2>
+        <div class="w-20 h-1 bg-navy-900 mx-auto"></div>
+    </div>
+    {% if site.posts.size > 0 %}
+    <div class="max-w-3xl mx-auto space-y-6">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="block bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 transition duration-300">
+            <p class="text-sm text-gray-500 mb-1">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <h3 class="text-xl font-bold text-navy-900 mb-2">{{ post.title }}</h3>
+            {% if post.excerpt %}
+            <p class="text-gray-600">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {% endif %}
+            {% if post.tags.size > 0 %}
+            <div class="flex flex-wrap gap-2 mt-4">
+                {% for tag in post.tags %}
+                <span class="px-3 py-1 bg-navy-50 text-navy-900 border border-navy-100 text-sm rounded-md">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-gray-500">No posts yet - check back soon.</p>
+    {% endif %}
+</section>

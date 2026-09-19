@@ -1,6 +1,8 @@
 nav:
   - label: About
     url: /
+  - label: Blog
+    url: /blog/
   - label: Research
     url: /research/
   - label: Projects

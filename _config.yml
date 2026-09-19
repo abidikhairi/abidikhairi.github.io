@@ -10,8 +10,11 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+permalink: /blog/:title/
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
 
 exclude:
   - Gemfile
