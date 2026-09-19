@@ -33,3 +33,12 @@
     - Python
     - CLI
     - vLLM
+
+- title: "KCNG Explorer"
+  description: "Gradio app using a protein masked language model (ESM Cambrian) to score point mutations, cross-check against UniProt natural variants, and visualize structure for the KCNG (Kv6) potassium channel subfamily."
+  icon: "fas fa-dna"
+  link: "https://huggingface.co/spaces/khairi/KCNG-Explorer"
+  tags:
+    - Protein Language Models
+    - Gradio
+    - Bioinformatics
